@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>L3 REMIX &amp; DJ TEAM : Kolektif Produser &amp; DJ Indonesia</title>
+  <meta name="description" content="Profil resmi 60 anggota dan sejarah L3 Remix &amp; DJ Team lintas Nusantara, Malaysia, dan Jepang di bawah kepemimpinan Ketua L3 Willy L3." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=35" />
+</head>
+<body>
+  <a href="#mainContent" class="skip-link">Langsung ke konten utama</a>
+
+  <div class="intro-curtain" id="introCurtain" role="dialog" aria-label="Pembuka L3 Remix &amp; DJ Team">
+    <div class="intro-content">
+      <div class="intro-logo-wrap">
+        <img src="assets/l3-logo.png" alt="Logo Resmi L3 Remix Team" width="330" height="301" fetchpriority="high" class="intro-logo-img" />
+      </div>
+      <p class="intro-title">L3 REMIX <span class="accent-text">&amp; DJ TEAM</span></p>
+      <div class="intro-loader-track" role="progressbar" aria-label="Memuat halaman L3 Remix" aria-valuemin="0" aria-valuemax="100" aria-valuenow="100">
+        <div class="intro-loader-bar" id="introLoaderBar"></div>
+      </div>
+    </div>
+  </div>
+
+  <header class="mobile-bar">
+    <a href="#home" class="brand-identity">
+      <img src="assets/l3-logo.png" alt="Logo L3 Remix" width="38" height="34" class="brand-logo-img-sm" />
+      <span class="brand-title">L3 REMIX</span>
+    </a>
+    <button type="button" class="mobile-toggle" id="mobileMenuBtn" aria-expanded="false" aria-controls="sidebar">Menu</button>
+  </header>
+
+  <div class="viewport-shell" id="mainViewport">
+    <aside class="studio-sidebar" id="sidebar" aria-label="Panel Navigasi Utama">
+      <div class="sidebar-head">
+        <a href="#home" class="brand-identity" id="replayIntroLogo" title="Putar ulang intro L3 Remix">
+          <div class="crest-outer">
+            <img src="assets/l3-logo.png" alt="Lambang L3 Remix Team" width="46" height="42" class="brand-logo-img" />
+          </div>
+          <div class="brand-titles">
+            <span class="brand-title">L3 REMIX</span>
+            <span class="brand-caption">DJ &amp; REMIXER TEAM</span>
+          </div>
+        </a>
+
+        <div class="sidebar-divider" aria-hidden="true"></div>
+
+        <nav class="sidebar-menu" id="navLinks" aria-label="Navigasi Utama">
+          <a href="#home" class="menu-link active">
+            <span class="menu-num">01</span>
+            <span>Beranda</span>
+          </a>
+          <a href="#members" class="menu-link">
+            <span class="menu-num">02</span>
+            <span>Roster L3 (60)</span>
+          </a>
+          <a href="#history" class="menu-link">
+            <span class="menu-num">03</span>
+            <span>Sejarah Tim</span>
+          </a>
+          <a href="#network" class="menu-link">
+            <span class="menu-num">04</span>
+            <span>Domisili (35 Wilayah)</span>
+          </a>
+        </nav>
+      </div>
+
+      <div class="sidebar-player-card" role="region" aria-label="Audio Preview Player">
+        <div class="player-header">
+          <div class="mini-disc" id="playerMiniDisc" aria-hidden="true">
+            <div class="mini-disc-core">L3</div>
+          </div>
+          <div class="player-info">
+            <span class="player-tag" id="sidebarPlayerTag">PREVIEW REMIX</span>
+            <strong class="player-track" id="sidebarPlayerTitle">Goodbye 2026 #LOCKED</strong>
+            <span class="player-artist" id="sidebarPlayerArtist">Fatah L3 (Palembang)</span>
+          </div>
+        </div>
+
+        <div class="player-progress-wrap">
+          <div class="player-time-row">
+            <span id="playerCurrentTime" class="time-label">0:00</span>
+            <span id="playerDuration" class="time-label">4:57</span>
+          </div>
+          <div class="player-progress-bar" id="playerProgressBar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" tabindex="0" aria-label="Posisi pemutaran audio">
+            <div class="player-progress-fill" id="playerProgressFill"></div>
+          </div>
+        </div>
+
+        <div class="player-controls-row">
+          <button type="button" class="btn-player-action btn-play-main" id="sidebarPlayBtn" aria-label="Putar lagu Goodbye 2026 oleh Fatah L3">
+            <svg class="play-icon" id="playIconSvg" viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true">
+              <path d="M8 5v14l11-7z"/>
+            </svg>
+            <span id="sidebarPlayBtnText">Play Preview</span>
+          </button>
+        </div>
+
+        <div class="player-tracklist">
+          <span class="tracklist-label">PILIH PREVIEW TRACK:</span>
+          <div class="tracklist-buttons" id="tracklistButtons">
+            <button type="button" class="track-select-pill active" data-track-index="0">
+              <span class="pill-dot" aria-hidden="true"></span>
+              <span class="pill-title">Fatah L3 - Goodbye 2026</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <main class="full-canvas" id="mainContent">
+      <section class="hero-stage" id="home" aria-label="Identitas Utama L3 Remix &amp; DJ Team">
+        <div class="hero-emblem-stage">
+          <div class="hero-emblem-box">
+            <img src="assets/l3-logo.png" alt="Logo 3D L3 Remix &amp; DJ Team" width="350" height="320" fetchpriority="high" class="hero-center-logo" id="heroLogoImg" />
+            <h1 class="display-heading hero-clean-title">
+              L3 REMIX <span class="accent-text">&amp; DJ TEAM</span>
+            </h1>
+          </div>
+        </div>
+
+        <div class="hero-mosaic-stage">
+          <div class="mosaic-header">
+            <span class="mosaic-label">POTRET STUDIO PERSONEL</span>
+            <a href="#members" class="mosaic-link">Lihat Seluruh 60 Anggota</a>
+          </div>
+
+          <div class="portrait-mosaic-grid" id="portraitMosaicGrid"></div>
+
+
+          <div class="mosaic-footer-strip">
+            <span>60 Personel Resmi</span>
+            <span>35 Kota &amp; Wilayah (Indonesia, Malaysia &amp; Jepang)</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="canvas-section" id="members" aria-labelledby="headingMembers">
+        <div class="section-header-bar">
+          <div>
+            <span class="section-index">02 / ROSTER</span>
+            <h2 class="section-title" id="headingMembers">Formasi Lengkap <span class="accent-text">60 Anggota L3</span></h2>
+            <p class="section-subtitle">Daftar resmi produser dan DJ anggota keluarga besar L3 Remix &amp; DJ Team beserta domisili masing-masing.</p>
+          </div>
+
+          <div class="member-search-wrap">
+            <label for="memberSearchInput" class="search-label">Filter Nama atau Domisili</label>
+            <input type="search" id="memberSearchInput" class="member-search-input" placeholder="Ketik nama (mis. Willy, Fatah) atau kota..." autocomplete="off" />
+          </div>
+        </div>
+
+        <div class="filter-bar" id="cityFilterBar" role="group" aria-label="Filter anggota berdasarkan kota domisili"></div>
+
+        <div id="membersStatus" class="status-banner" hidden aria-live="polite"></div>
+
+        <div class="members-grid" id="membersGrid"></div>
+      </section>
+
+      <section class="canvas-section" id="history" aria-labelledby="headingHistory">
+        <div class="section-header-bar">
+          <div>
+            <span class="section-index">03 / MANIFESTO &amp; SEJARAH</span>
+            <h2 class="section-title" id="headingHistory">Sejarah &amp; Identitas <span class="accent-text">L3 Remix &amp; DJ Team</span></h2>
+          </div>
+        </div>
+
+        <div class="history-editorial-layout">
+          <article class="history-prose-panel">
+            <h3>Semua Berawal Dari Sebuah Perjalanan &amp; Kecintaan Terhadap Musik Remix</h3>
+            <p>
+              Pada tahun <strong>2005</strong>, seorang bernama <strong>Willy L3</strong> mulai merintis perjalanan kariernya di dunia remix. Berawal dari ketertarikan dan eksplorasi musik, ia terus mengembangkan kreativitas serta menemukan identitasnya dalam dunia remix.
+            </p>
+            <p>
+              Perjalanan tersebut bukan sekadar tentang menciptakan musik, tetapi juga tentang membangun sesuatu yang lebih besar: sebuah wadah bagi para pecinta, kreator, dan penggiat musik remix untuk saling terhubung.
+            </p>
+            <p>
+              Hingga akhirnya, pada tahun <strong>2009</strong>, lahirlah <strong>L3 Remix (Level 3 Remix)</strong> untuk pertama kalinya. Berawal dari sebuah gagasan sederhana, L3 Remix tumbuh menjadi sebuah komunitas yang membawa semangat kebersamaan, kreativitas, dan kecintaan terhadap musik remix.
+            </p>
+            <p>
+              Dari perjalanan seorang individu, terciptalah sebuah nama. Dari sebuah <em>passion</em>, lahirlah sebuah komunitas besar yang kini menaungi <strong>60 DJ &amp; Remixer resmi</strong> di <strong>35 wilayah</strong> lintas Indonesia, Malaysia, hingga Jepang.
+            </p>
+            <p class="history-highlight-quote">
+              &ldquo;L3 Remix bukan sekadar nama, melainkan bagian dari perjalanan, sejarah, dan perkembangan musik remix yang terus hidup dari generasi ke generasi.&rdquo;
+            </p>
+          </article>
+
+          <aside class="history-spec-panel" aria-label="Data Identitas &amp; Linimasa Kolektif L3">
+            <h3>Linimasa &amp; Identitas</h3>
+            <dl class="spec-ledger">
+              <div class="spec-row">
+                <dt>Pendiri &amp; Ketua</dt>
+                <dd>Willy L3 (Jakarta)</dd>
+              </div>
+              <div class="spec-row">
+                <dt>Awal Perjalanan</dt>
+                <dd>Tahun 2005 (Rintisan Karier)</dd>
+              </div>
+              <div class="spec-row">
+                <dt>Tahun Berdiri</dt>
+                <dd>2009 (Level 3 Remix)</dd>
+              </div>
+              <div class="spec-row">
+                <dt>Total Personel</dt>
+                <dd>60 DJ &amp; Remixer Resmi</dd>
+              </div>
+              <div class="spec-row">
+                <dt>Cakupan Wilayah</dt>
+                <dd>35 Kota / Wilayah Global</dd>
+              </div>
+              <div class="spec-row">
+                <dt>Jangkauan Negara</dt>
+                <dd>Indonesia, Malaysia, Jepang</dd>
+              </div>
+            </dl>
+          </aside>
+        </div>
+      </section>
+
+      <section class="canvas-section canvas-section-compact" id="network" aria-labelledby="headingNetwork">
+        <div class="section-header-bar section-header-compact">
+          <div>
+            <span class="section-index">04 / DOMISILI</span>
+            <h2 class="section-title section-title-sm" id="headingNetwork">Basis Domisili <span class="accent-text">35 Wilayah</span></h2>
+          </div>
+        </div>
+
+        <div class="cities-ledger-grid" id="citiesBentoGrid"></div>
+      </section>
+
+      <footer class="canvas-footer">
+        <div>
+          <strong>L3 REMIX &amp; DJ TEAM</strong> : Kolektif 60 Produser &amp; DJ Indonesia, Malaysia &amp; Jepang.
+        </div>
+        <div>&copy; 2026 L3 Remix &amp; DJ Team.</div>
+      </footer>
+    </main>
+  </div>
+
+  <div class="modal-backdrop" id="modalBackdrop" aria-hidden="true">
+    <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button type="button" class="modal-close" id="modalCloseBtn" aria-label="Tutup dialog profil">&times;</button>
+      <div id="modalBody"></div>
+    </div>
+  </div>
+
+  <script src="app.js?v=35"></script>
+</body>
+</html>
