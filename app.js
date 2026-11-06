@@ -470,6 +470,16 @@ const rawMembersList = [
     quote: "Dari Manado menyatukan energi dan kreasi audio terbaik bersama keluarga besar L3 Remix."
   },
   {
+    id: "faisal",
+    name: "Faisal L3",
+    photo: "assets/faisal-l3.jpg",
+    city: "Batam",
+    province: "Kepulauan Riau",
+    role: "Domisili Batam",
+    bio: "Personel L3 Remix & DJ Team asal Batam yang memperkuat lini Kepulauan Riau bersama Weiliang L3, Andrea L3, dan Endra L3 dengan karakter aransemen panggung modern dan presisi mixing tinggi.",
+    quote: "Dari Batam menghadirkan dentuman dan kualitas musik elektronik terbaik bersama keluarga besar L3 Remix."
+  },
+  {
     id: "digo",
     name: "Digo L3",
     city: "Padang",
@@ -510,13 +520,6 @@ const rawMembersList = [
     city: "Surabaya",
     province: "Jawa Timur",
     role: "Domisili Surabaya"
-  },
-  {
-    id: "faisal",
-    name: "Faisal L3",
-    city: "Batam",
-    province: "Kepulauan Riau",
-    role: "Domisili Batam"
   },
   {
     id: "rassid",
