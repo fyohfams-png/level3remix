@@ -28,17 +28,17 @@ function playIntroSequence() {
   if (mainViewport) mainViewport.classList.remove("revealed");
 
   if (introLoaderBar) {
-    introLoaderBar.style.transition = "none";
-    introLoaderBar.style.width = "0%";
+    introLoaderBar.classList.remove("is-loading");
+
     requestAnimationFrame(() => {
       requestAnimationFrame(() => {
-        introLoaderBar.style.transition = "width 1.9s cubic-bezier(0.22, 1, 0.36, 1)";
-        introLoaderBar.style.width = "100%";
+        introLoaderBar.classList.add("is-loading");
+
       });
     });
   }
 
-  introTimer = setTimeout(revealMainStage, 2100);
+  introTimer = setTimeout(revealMainStage, 800);
 }
 
 window.addEventListener("DOMContentLoaded", () => {
@@ -80,7 +80,7 @@ const rawMembersList = [
   {
     id: "fariz",
     name: "Fariz L3",
-    photo: "assets/fariz-l3.png?v=3",
+    photo: "assets/fariz-l3.jpg?v=4",
     city: "Jakarta",
     province: "DKI Jakarta",
     role: "Domisili Jakarta",
@@ -192,7 +192,7 @@ const rawMembersList = [
   {
     id: "teddy-yang",
     name: "Teddy Yang L3",
-    photo: "assets/teddy-yang-l3.png",
+    photo: "assets/teddy-yang-l3.jpg?v=2",
     city: "Pontianak, Kalbar",
     province: "Kalimantan Barat",
     role: "Domisili Pontianak, Kalbar",
@@ -676,9 +676,9 @@ function renderMembers() {
       <article class="member-card ${member.isLeader ? "leader-card" : ""}" id="member-${member.id}">
         <div class="card-backdrop">
           ${member.photo
-            ? `<img src="${member.photo}" alt="Potret ${member.name}" width="400" height="465" loading="lazy" />`
+            ? `<img src="${member.photo}" alt="Potret ${member.name}" width="400" height="465" loading="lazy" decoding="async" />`
             : `<div class="card-backdrop-monogram">
-                 <img src="assets/l3-logo.png" alt="Lambang L3 Remix untuk ${member.name}" width="130" height="118" loading="lazy" />
+                 <img src="assets/l3-logo.png" alt="Lambang L3 Remix untuk ${member.name}" width="130" height="118" loading="lazy" decoding="async" />
                  <small>L3 REMIX • #${member.numCode}</small>
                </div>`
           }
@@ -747,12 +747,13 @@ function renderPortraitMosaic() {
   if (!portraitMosaicGrid) return;
   // 3 baris x 4 kolom = 12 personel teratas yang memiliki foto studio
   const photographed = membersData.filter(m => m.photo).slice(0, 12);
-  portraitMosaicGrid.innerHTML = photographed.map(m => {
+  portraitMosaicGrid.innerHTML = photographed.map((m, idx) => {
     const place = m.city.split(",")[0];
     const roleLabel = m.isLeader ? `Ketua • ${place}` : place;
+    const loadAttrs = idx < 4 ? 'fetchpriority="high" decoding="async"' : 'loading="lazy" decoding="async"';
     return `
       <a href="#members" class="mosaic-item${m.isLeader ? " leader-mosaic" : ""}" data-focus-member="${m.id}">
-        <img src="${m.photo}" alt="Potret ${m.name}, ${place}" width="320" height="400" loading="lazy" />
+        <img src="${m.photo}" alt="Potret ${m.name}, ${place}" width="320" height="400" ${loadAttrs} />
         <div class="mosaic-caption">
           <span class="mosaic-role">${roleLabel}</span>
           <strong>${m.name}</strong>
@@ -983,8 +984,7 @@ const previewTracks = [
 
 let currentTrackIndex = 0;
 const audioPlayer = new Audio();
-audioPlayer.preload = "metadata";
-audioPlayer.src = previewTracks[0].file;
+audioPlayer.preload = "none";
 
 const sidebarPlayBtn = document.getElementById("sidebarPlayBtn");
 const sidebarPlayBtnText = document.getElementById("sidebarPlayBtnText");
@@ -1026,6 +1026,9 @@ function updatePlayUi(isPlaying) {
 
 if (sidebarPlayBtn) {
   sidebarPlayBtn.addEventListener("click", () => {
+    if (!audioPlayer.src) {
+      audioPlayer.src = previewTracks[currentTrackIndex].file;
+    }
     if (audioPlayer.paused) {
       audioPlayer.play().then(() => {
         updatePlayUi(true);
