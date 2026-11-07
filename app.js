@@ -176,6 +176,8 @@ const rawMembersList = [
     city: "Pekanbaru",
     province: "Riau",
     role: "Domisili Pekanbaru",
+    soundcloudUrl: "https://soundcloud.com/wandri-zainudin-735410592",
+    tiktokUrl: "https://www.tiktok.com/@wandril3",
     bio: "Personel L3 Remix & DJ Team asal Pekanbaru dengan sentuhan aransemen khas dan kualitas mixing yang matang.",
     quote: "Dari Pekanbaru mempersembahkan harmoni dan dentuman terbaik bersama L3 Remix."
   },
