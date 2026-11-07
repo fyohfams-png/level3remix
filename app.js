@@ -84,6 +84,8 @@ const rawMembersList = [
     city: "Jakarta",
     province: "DKI Jakarta",
     role: "Domisili Jakarta",
+    soundcloudUrl: "https://soundcloud.com/farizl3rmx",
+    tiktokUrl: "https://www.tiktok.com/@farizl3rmx",
     bio: "Personel L3 Remix & DJ Team asal Jakarta yang dikenal lewat racikan musik dan aransemen panggung yang dinamis serta presisi mixing tinggi.",
     quote: "Menghadirkan racikan musik yang bersih, enerjik, dan berkarakter khas L3."
   },
@@ -94,6 +96,8 @@ const rawMembersList = [
     city: "Jakarta",
     province: "DKI Jakarta",
     role: "Domisili Jakarta",
+    soundcloudUrl: "https://soundcloud.com/user-324138404",
+    tiktokUrl: "https://www.tiktok.com/@use_l3rmx",
     bio: "Memperkuat lini Jakarta bersama Willy L3, Fariz L3, Agas L3, dan DTo L3 dengan karakter aransemen modern serta standar produksi audio kelas klub.",
     quote: "Satu bendera L3 Remix, berkarya dengan dedikasi penuh."
   },
@@ -116,6 +120,8 @@ const rawMembersList = [
     city: "Jakarta",
     province: "DKI Jakarta",
     role: "Domisili Jakarta",
+    soundcloudUrl: "https://soundcloud.com/fannie-deng-huan-ni",
+    tiktokUrl: "https://www.tiktok.com/@agassi_09",
     bio: "Personel L3 Remix & DJ Team asal Jakarta dengan presisi mixing tinggi serta karakter aransemen panggung yang enerjik.",
     quote: "Setiap frekuensi dan transisi dirancang untuk menghidupkan lantai dansa bersama L3."
   },
@@ -126,6 +132,8 @@ const rawMembersList = [
     city: "Pekanbaru",
     province: "Riau",
     role: "Domisili Pekanbaru",
+    soundcloudUrl: "https://soundcloud.com/djorgiel3_1st",
+    tiktokUrl: "https://www.tiktok.com/@djorgie_l3",
     bio: "Personel L3 Remix & DJ Team asal Pekanbaru yang memperkuat lini Riau bersama Wandri L3, Riski Melvo L3, dan Adit L3 dengan sentuhan aransemen panggung yang dinamis serta kualitas mixing yang solid.",
     quote: "Dari Pekanbaru menghadirkan getaran dan energi panggung terbaik bersama keluarga besar L3 Remix."
   },
@@ -156,6 +164,8 @@ const rawMembersList = [
     city: "Jakarta",
     province: "DKI Jakarta",
     role: "Domisili Jakarta",
+    soundcloudUrl: "https://soundcloud.com/dto_l3",
+    tiktokUrl: "https://www.tiktok.com/@dto.l3",
     bio: "Personel L3 Remix & DJ Team asal Jakarta dengan gaya aransemen berkelas serta kualitas produksi klub malam yang solid.",
     quote: "Dari Jakarta menghadirkan standar kualitas produksi terbaik bersama keluarga besar L3."
   },
@@ -186,6 +196,8 @@ const rawMembersList = [
     city: "Pekanbaru",
     province: "Riau",
     role: "Domisili Pekanbaru",
+    soundcloudUrl: "https://soundcloud.com/melvo-channel",
+    tiktokUrl: "https://www.tiktok.com/@riskimelvo",
     bio: "Personel L3 Remix & DJ Team asal Pekanbaru yang memperkuat lini Riau bersama Wandri L3, Djorgie L3, dan Adit L3 dengan karakter aransemen modern.",
     quote: "Dari Pekanbaru menghadirkan racikan musik berkualitas tinggi bersama keluarga besar L3 Remix."
   },
