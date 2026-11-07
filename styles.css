@@ -1852,3 +1852,124 @@ body.no-intro .intro-curtain {
     grid-template-columns: 1fr;
   }
 }
+
+/* Tracklist Panel */
+.album-tracklist-panel {
+  margin-top: 24px;
+  background: var(--bg-velvet);
+  border: 1px solid var(--border-champagne);
+  border-radius: var(--radius-xl);
+  padding: 28px 32px;
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.5);
+}
+
+.tracklist-panel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--border-champagne);
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.panel-tag {
+  display: block;
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  color: #ef4444;
+  margin-bottom: 4px;
+}
+
+.panel-heading {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--text-ivory);
+}
+
+.tracklist-badge-lock {
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 1.2px;
+  background: rgba(239, 68, 68, 0.12);
+  color: #ff6b6b;
+  border: 1px solid rgba(239, 68, 68, 0.35);
+  padding: 6px 14px;
+  border-radius: var(--radius-full);
+}
+
+.tracklist-table {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px 20px;
+}
+
+.track-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 12px 16px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(214, 180, 124, 0.1);
+  border-radius: var(--radius-md);
+  transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+}
+
+.track-row:hover {
+  background: rgba(239, 68, 68, 0.05);
+  border-color: rgba(239, 68, 68, 0.3);
+  transform: translateX(4px);
+}
+
+.t-num {
+  font-family: var(--font-display);
+  font-size: 0.9rem;
+  font-weight: 800;
+  color: var(--champagne-gold);
+  width: 24px;
+}
+
+.t-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.t-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text-ivory);
+  letter-spacing: 0.3px;
+}
+
+.t-artist {
+  font-size: 0.74rem;
+  color: var(--text-muted);
+}
+
+.t-status {
+  font-size: 0.64rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  color: #ef4444;
+  background: rgba(239, 68, 68, 0.1);
+  padding: 3px 8px;
+  border-radius: var(--radius-sm);
+  border: 1px solid rgba(239, 68, 68, 0.25);
+}
+
+@media (max-width: 900px) {
+  .tracklist-table {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 580px) {
+  .album-tracklist-panel {
+    padding: 20px 16px;
+  }
+}
