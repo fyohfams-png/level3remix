@@ -966,7 +966,7 @@ menuLinks.forEach(link => {
   });
 });
 
-const trackedSections = ["home", "members", "history", "network"]
+const trackedSections = ["home", "members", "history", "network", "album"]
   .map(id => document.getElementById(id))
   .filter(Boolean);
 
